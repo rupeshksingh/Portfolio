@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Rupesh Kumar Singh - Portfolio</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="./script.js" defer></script>
+</head>
+
+<body>
+  <!-- Navigation Bar -->
+  <nav>
+    <div id="home">
+      <div class="profile_name">
+        Rupesh Kumar Singh
+        <div class="contact_info">
+          <img src="envelope.png" alt="Email Icon" />
+          <a href="mailto:rupeshkumarsingh908@gmail.com">rupeshkumarsingh908@gmail.com</a>
+        </div>
+        <div class="contact_info">
+          <img src="phone.png" alt="Phone Icon" />
+          +91 8456764598
+        </div>
+        <div class="contact_info">
+          <img src="linkedin.png" alt="LinkedIn Icon" />
+          <a href="https://www.linkedin.com/in/rupesh-kumar-singh-542040235" target="_blank">LinkedIn</a>
+        </div>
+      </div>
+      <div class="topdiv">
+        <a class="topmenu" href="#about-me">About Me</a>
+        <a class="topmenu" href="#skills">Skills</a>
+        <a class="topmenu" href="#projects">Projects</a>
+        <a class="topmenu" href="#recommendations">Recommendations</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- About Me -->
+  <section id="about-me" class="container">
+    <div>
+      <img src="profile_image.jpg" class="profile_image" />
+    </div>
+    <div>
+      <h1>Hi, I'm Rupesh Kumar Singh!</h1>
+      <p>
+        I'm a Mechanical Engineering student at IIT Kharagpur with a passion for AI and Machine Learning.
+        I specialize in Retrieval-Augmented Generation (RAG), LLM fine-tuning, and AI-driven automation.
+        My experience includes working with AI startups, developing intelligent chatbots, and creating machine learning models.
+      </p>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="all_skills">
+      <div class="skill"><img src="python.png" /><h6>Python</h6><p>3+ years</p></div>
+      <div class="skill"><img src="ml.png" /><h6>Machine Learning</h6><p>3+ years</p></div>
+      <div class="skill"><img src="rag.png" /><h6>RAG</h6><p>2 years</p></div>
+      <div class="skill"><img src="llm.png" /><h6>LLM Fine-tuning</h6><p>1.5 years</p></div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects-container">
+      <div class="project-card">
+        <h3>Uncensored Chat Models</h3>
+        <ul><li>Developed custom LLMs using SFT, PEFT, LoRA, and ORPO for chatbots.</li></ul>
+      </div>
+      <div class="project-card">
+        <h3>Retrieval-Augmented Generation Pipelines</h3>
+        <ul><li>Built efficient RAG pipelines for enterprise-level search systems.</li></ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Recommendations -->
+  <section id="recommendations">
+    <h2>Recommendations</h2>
+    <div id="all_recommendations"></div>
+  </section>
+
+  <!-- Recommendation Form -->
+  <section id="contact">
+    <fieldset>
+      <legend>Leave a Recommendation</legend>
+      <input type="text" placeholder="Name (Optional)"> <br />
+      <textarea id="new_recommendation" cols="50" rows="5" placeholder="Message"></textarea>
+      <button id="recommend_btn" onclick="addRecommendation()">Submit</button>
+    </fieldset>
+  </section>
+
+  <div class="popup" id="popup">
+    <img src="checkmark.png" height="30px" width="30px"/>
+    <h3>Thanks for leaving a recommendation!</h3>
+    <button onclick="showPopup(false)">Ok</button>
+  </div>
+</body>
+</html>
